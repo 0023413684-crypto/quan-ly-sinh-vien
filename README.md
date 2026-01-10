@@ -4,13 +4,13 @@
   KHOA ||--o{ LOP_KH : quan_ly
   BO_MON ||--o{ MON_HOC : phu_trach
 
-  LOP_KH ||--o{ SINH_VIEN : 
+  LOP_KH ||--o{ SINH_VIEN : chua
 
-  MON_HOC ||--o{ LOP_MH : 
+  MON_HOC ||--o{ LOP_MH : mo
   GIANG_VIEN ||--o{ LOP_MH : giang_day
 
   SINH_VIEN ||--o{ DANG_KY : dang_ky
-  LOP_MH ||--o{ DANG_KY :  
+  LOP_MH ||--o{ DANG_KY :  co
 
     KHOA {
         string maKhoa PK
