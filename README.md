@@ -1,13 +1,16 @@
 ```mermaid
   erDiagram
     KHOA ||--o{ BO_MON : quan_ly
-    KHOA ||--o{ LOP_KH : quan_ly
-    BO_MON ||--o{ MON_HOC : phu_trach
-    LOP_KH ||--o{ SINH_VIEN : 
-    MON_HOC ||--o{ LOP_MH : 
-    GIANG_VIEN ||--o{ LOP_MH : giang_day
-    SINH_VIEN ||--o{ DANG_KY : dang_ky
-    LOP_MH ||--o{ DANG_KY : 
+  KHOA ||--o{ LOP_KH : quan_ly
+  BO_MON ||--o{ MON_HOC : phu_trach
+
+  LOP_KH ||--o{ SINH_VIEN : 
+
+  MON_HOC ||--o{ LOP_MH : 
+  GIANG_VIEN ||--o{ LOP_MH : giang_day
+
+  SINH_VIEN ||--o{ DANG_KY : dang_ky
+  LOP_MH ||--o{ DANG_KY :  
 
     KHOA {
         string maKhoa PK
