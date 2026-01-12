@@ -6,9 +6,8 @@
     LOP_KH ||--o{ SINH_VIEN : chua
     MON_HOC ||--o{ LOP_MH : mo
     GIANG_VIEN ||--o{ LOP_MH : giang_day
-    SINH_VIEN ||--o{ DANG_KY : dang_ky
-    LOP_MH ||--o{ DANG_KY : co
-    DANG_KY ||--|| KET_QUA_HOC_TAP : tong_hop
+    SINH_VIEN ||--o{ DANGKY_MH : dang_ky
+    LOP_MH ||--o{ DANGKY_MH : co
 
     KHOA {
         string maKhoa PK
@@ -64,12 +63,7 @@
         int siSoToiDa
     }
 
-    DANG_KY {
-        string maSV PK, FK
-        string maLopMH PK, FK
-    }
-
-    KET_QUA_HOC_TAP {
+    DANGKY_MH {
         string maSV PK, FK
         string maLopMH PK, FK
         float diemQT
