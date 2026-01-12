@@ -8,6 +8,7 @@
     GIANG_VIEN ||--o{ LOP_MH : giang_day
     SINH_VIEN ||--o{ DANG_KY : dang_ky
     LOP_MH ||--o{ DANG_KY : co
+    DANG_KY ||--|| KET_QUA_HOC_TAP : tong_hop
 
     KHOA {
         string maKhoa PK
@@ -64,6 +65,11 @@
     }
 
     DANG_KY {
+        string maSV PK, FK
+        string maLopMH PK, FK
+    }
+
+    KET_QUA_HOC_TAP {
         string maSV PK, FK
         string maLopMH PK, FK
         float diemQT
