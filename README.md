@@ -52,16 +52,16 @@
         string maMon FK
         string maGV FK
     }
-GIANG_VIEN ──< LOP_MH ──< KET_QUA >── SINH_VIEN
+
     DANGKY_MH {
-        string maSV FK
-        string maLopMH FK
+        string maSV PK, FK
+        string maLopMH PK, FK
         date ngayDangKy
     }
 
     KET_QUA {
-        string maSV FK
-        string maLopMH FK
+        string maSV PK, FK
+        string maLopMH PK, FK
         float diemQT
         float diemThi
         float diemTongKet
@@ -69,15 +69,15 @@ GIANG_VIEN ──< LOP_MH ──< KET_QUA >── SINH_VIEN
     }
 
     %% Quan hệ
-    KHOA ||--o{ BO_MON : "quản lý"
-    KHOA ||--o{ LOP_KH : "quản lý"
-    BO_MON ||--o{ MON_HOC : "gồm"
-    BO_MON ||--o{ GIANG_VIEN : "quản lý"
-    MON_HOC ||--o{ LOP_MH : "mở"
-    GIANG_VIEN ||--o{ LOP_MH : "giảng dạy"
-    LOP_KH ||--o{ SINH_VIEN : "chứa"
-    SINH_VIEN ||--o{ DANGKY_MH : "đăng ký"
-    LOP_MH ||--o{ DANGKY_MH : "được đăng ký"
-    SINH_VIEN ||--o{ KET_QUA : "có"
-    LOP_MH ||--o{ KET_QUA : "có"
+    KHOA ||--o{ BO_MON : quan_ly
+    KHOA ||--o{ LOP_KH : quan_ly
+    BO_MON ||--o{ MON_HOC : phu_trach
+    BO_MON ||--o{ GIANG_VIEN : quan_ly
+    MON_HOC ||--o{ LOP_MH : mo
+    GIANG_VIEN ||--o{ LOP_MH : giang_day
+    LOP_KH ||--o{ SINH_VIEN : chua
+    SINH_VIEN ||--o{ DANGKY_MH : dang_ky
+    LOP_MH ||--o{ DANGKY_MH : duoc_dang_ky
+    SINH_VIEN ||--o{ KET_QUA : co
+    LOP_MH ||--o{ KET_QUA : co
 ```
