@@ -52,7 +52,7 @@
         string maMon FK
         string maGV FK
     }
-
+GIANG_VIEN ──< LOP_MH ──< KET_QUA >── SINH_VIEN
     DANGKY_MH {
         string maSV FK
         string maLopMH FK
